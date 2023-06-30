@@ -14,9 +14,9 @@ let restar
 
 function setup() {
     createCanvas(576, 576);
-    person = loadImage('sara.png')
-    grama = loadImage('Grass Texture 4.jpg')
-    Mapa = loadImage('Mapa.png')
+    person = loadImage('assets/images/sara.png')
+    grama = loadImage('assets/images/Grass Texture 4.jpg')
+    Mapa = loadImage('assets/images/Mapa.png')
 }
 
 function draw() {
