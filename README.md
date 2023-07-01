@@ -1,4 +1,3 @@
-# Primeiro-joguinho
 ## Meu primeiro jogo
 
 > O Jogo foi apresentado na aula inaugural da Cubos Academy
