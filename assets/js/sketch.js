@@ -1,6 +1,6 @@
 let person
 let grama
-let Mapa
+let mapa
 
 let tamanho = 64
 
@@ -11,12 +11,29 @@ let velocidade = 64
 
 let restar
 
+let buttonUp
+let buttonDown
+let buttonLeft
+let buttonRight
 
 function setup() {
     createCanvas(576, 576);
+
     person = loadImage('assets/images/sara.png')
     grama = loadImage('assets/images/Grass Texture 4.jpg')
-    Mapa = loadImage('assets/images/Mapa.png')
+    mapa = loadImage('assets/images/Mapa.png')
+
+    buttonUp = createButton('up')
+    buttonUp.mousePressed(moveup)
+    buttonDown = createButton('Down')
+    buttonDown.mousePressed(moveDown)
+
+    buttonLeft = createButton('Left')
+    buttonLeft.mousePressed(moveLeft)
+
+    buttonRight = createButton('Right')
+    buttonRight.mousePressed(moveRight)
+
 }
 
 function draw() {
@@ -41,10 +58,10 @@ function draw() {
         }
     }
 
-    image(Mapa, 500, 500)
+    image(mapa, 500, 500)
     image(person, andarx, andary, tamanho, tamanho)
     textSize(30)
-    text('Colete o Mapa', 185, 259)
+    text('Colete o mapa', 185, 259)
 
     if (andarx === tamanho * 8 && andary === tamanho * 8) {
         rect(160, 160, 256, 256)
@@ -57,6 +74,20 @@ function draw() {
 
         noLoop()
     }
+
+}
+
+function moveup() {
+    andary -= velocidade
+}
+function moveDown() {
+    andary += velocidade
+}
+function moveLeft() {
+    andarx -= velocidade
+}
+function moveRight() {
+    andarx += velocidade
 }
 
 function reset() {
@@ -81,3 +112,4 @@ function keyPressed() {
         andarx += velocidade
     }
 }
+
