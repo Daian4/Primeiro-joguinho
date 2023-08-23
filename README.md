@@ -6,4 +6,4 @@
 >
 > [Jogo](https://daian4.github.io/Primeiro-joguinho/) - acesso do Jogo 2D
 
-![](./mapa.png)
+>![](./mapa.png)
