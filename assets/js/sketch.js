@@ -7,6 +7,9 @@ let tamanho = 64
 let andarx = 0
 let andary = 0
 
+let randomx = 0
+let randomy = 0
+
 let velocidade = 64
 
 let restar
@@ -22,6 +25,7 @@ function setup() {
     person = loadImage('assets/images/sara.png')
     grama = loadImage('assets/images/Grass Texture 4.jpg')
     mapa = loadImage('assets/images/Mapa.png')
+    randomTarget()
 
     buttonUp = createButton('up')
     buttonUp.mousePressed(moveup)
@@ -75,6 +79,11 @@ function draw() {
         noLoop()
     }
 
+}
+
+function randomTarget() {
+    randomx = parseInt(random(1, 7));
+    randomy = parseInt(random(1, 7));
 }
 
 function moveup() {
